@@ -1,7 +1,8 @@
 <?php
 include_once("config.php");
 
-$truyvan = "SELECT *  FROM loaisanpham ";
+$maloaicha = $_GET["maloaicha"];
+$truyvan = "SELECT *  FROM loaisanpham WHERE MALOAI_CHA = " .$maloaicha ;
 $ketqua = mysqli_query($conn, $truyvan);
 $chuoijson = array();
 echo "{";
