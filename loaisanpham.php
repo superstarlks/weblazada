@@ -1,7 +1,7 @@
 <?php
 include_once("config.php");
 
-$maloaicha = $_GET["maloaicha"];
+$maloaicha = $_POST["maloaicha"];
 $truyvan = "SELECT *  FROM loaisanpham WHERE MALOAI_CHA = " .$maloaicha ;
 $ketqua = mysqli_query($conn, $truyvan);
 $chuoijson = array();
