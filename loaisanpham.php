@@ -1,9 +1,7 @@
 
 <?php
 include_once("config.php");
-
-// $ham = $_GET["ham"];
-
+//$ham = $_GET["ham"];
 $ham = $_POST["ham"];
 
 switch ($ham) {
@@ -155,7 +153,6 @@ function LayDanhSachKhuyenMai(){
                     $chuoijsondanhsachsanpham[] = $dongkhuyenmai;
                 }
             }
-
             array_push($chuoijson, array("MAKM"=>$dong["MAKM"],"TENLOAISP"=>$dong["TENLOAISP"],"TENKM"=>$dong["TENKM"],"HINHKHUYENMAI"=>$dong["HINHKHUYENMAI"],"DANHSACHSANPHAM"=>$chuoijsondanhsachsanpham));
 
         }
@@ -178,8 +175,9 @@ function ThemHoaDon(){
 
     }
 
+    $currentdate = date("Ymd");
     $ngayhientai = date("d/m/Y");
-    $ngaygiao = date_create($ngayhientai);
+    $ngaygiao = date_create($currentdate);
     $ngaygiao = date_modify($ngaygiao,"+3 days");
     $ngaygiao = date_format($ngaygiao,"d/m/Y") ;
 
